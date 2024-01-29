@@ -1,8 +1,7 @@
-// import fs from "fs";
 import "@nomicfoundation/hardhat-foundry"
 import "@nomicfoundation/hardhat-toolbox"
 import "@typechain/hardhat"
-import { HardhatUserConfig, task } from "hardhat/config"
+import { HardhatUserConfig } from "hardhat/config"
 
 import "./tasks/Balance"
 
