@@ -1,0 +1,29 @@
+{
+  "name": "forge-openzeppelin-hardhat-template",
+  "version": "1.0.0",
+  "description": "A Foundry template for rapidly initializing a Solidity project with openzeppelin & hardhat.",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "build": "hardhat compile",
+    "test": "hardhat test"
+  },
+  "license": "AGPL-3.0",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-foundry": "^1.1.1",
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@typechain/ethers-v5": "^11.1.2",
+    "@typechain/hardhat": "^9.1.0",
+    "@types/chai": "^4.3.11",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.11.10",
+    "chai": "^4.4.1",
+    "ethers": "^6.10.0",
+    "hardhat": "^2.19.4",
+    "ts-node": "^10.9.2",
+    "typechain": "^8.3.2",
+    "typescript": "^5.3.3"
+  }
+}
