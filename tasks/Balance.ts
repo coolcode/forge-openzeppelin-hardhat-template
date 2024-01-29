@@ -1,15 +1,13 @@
-import { HardhatRuntimeEnvironment } from "hardhat/types/runtime"
+import { task } from "hardhat/config"
 
-export default async (
-  params: { account: string },
-  hre: HardhatRuntimeEnvironment
-): Promise<void> => {
-  const ethers = hre.ethers
-  const accountIndex = params.account
-  console.info("account index:", accountIndex)
-  const accounts = await ethers.getSigners()
-  const address = await accounts[accountIndex].getAddress()
-  const balance = await ethers.provider.getBalance(address)
+task("balance", "Prints an account's balance")
+  .addParam<string>("account", "The account's address")
+  .setAction(async (taskArgs, { ethers }) => {
+    const accountIndex = taskArgs.account
+    console.info("account index:", accountIndex)
+    const accounts = await ethers.getSigners()
+    const address = await accounts[accountIndex].getAddress()
+    const balance = await ethers.provider.getBalance(address)
 
-  console.info(`Balance account ${address}: ${balance}`)
-}
+    console.info(`Balance account ${address}: ${balance}`)
+  })

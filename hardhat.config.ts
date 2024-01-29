@@ -4,11 +4,7 @@ import "@nomicfoundation/hardhat-toolbox"
 import "@typechain/hardhat"
 import { HardhatUserConfig, task } from "hardhat/config"
 
-import Balance from "./tasks/Balance"
-
-task("balance", "Prints an account's balance")
-  .addParam("account", "The account's address")
-  .setAction(Balance)
+import "./tasks/Balance"
 
 const config: HardhatUserConfig = {
   solidity: {
