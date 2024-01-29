@@ -11,39 +11,9 @@ devDependencies:
   '@nomicfoundation/hardhat-toolbox':
     specifier: ^4.0.0
     version: 4.0.0(@nomicfoundation/hardhat-chai-matchers@2.0.3)(@nomicfoundation/hardhat-ethers@3.0.5)(@nomicfoundation/hardhat-network-helpers@1.0.10)(@nomicfoundation/hardhat-verify@2.0.3)(@typechain/ethers-v6@0.5.1)(@typechain/hardhat@9.1.0)(@types/chai@4.3.11)(@types/mocha@10.0.6)(@types/node@20.11.10)(chai@4.4.1)(ethers@6.10.0)(hardhat-gas-reporter@1.0.9)(hardhat@2.19.4)(solidity-coverage@0.8.6)(ts-node@10.9.2)(typechain@8.3.2)(typescript@5.3.3)
-  '@typechain/ethers-v5':
-    specifier: ^11.1.2
-    version: 11.1.2(@ethersproject/abi@5.7.0)(@ethersproject/providers@5.7.2)(ethers@6.10.0)(typechain@8.3.2)(typescript@5.3.3)
-  '@typechain/hardhat':
-    specifier: ^9.1.0
-    version: 9.1.0(@typechain/ethers-v6@0.5.1)(ethers@6.10.0)(hardhat@2.19.4)(typechain@8.3.2)
-  '@types/chai':
-    specifier: ^4.3.11
-    version: 4.3.11
-  '@types/mocha':
-    specifier: ^10.0.6
-    version: 10.0.6
-  '@types/node':
-    specifier: ^20.11.10
-    version: 20.11.10
-  chai:
-    specifier: ^4.4.1
-    version: 4.4.1
-  ethers:
-    specifier: ^6.10.0
-    version: 6.10.0
   hardhat:
     specifier: ^2.19.4
     version: 2.19.4(ts-node@10.9.2)(typescript@5.3.3)
-  ts-node:
-    specifier: ^10.9.2
-    version: 10.9.2(@types/node@20.11.10)(typescript@5.3.3)
-  typechain:
-    specifier: ^8.3.2
-    version: 8.3.2(typescript@5.3.3)
-  typescript:
-    specifier: ^5.3.3
-    version: 5.3.3
 
 packages:
 
@@ -1003,24 +973,6 @@ packages:
 
   /@tsconfig/node16@1.0.4:
     resolution: {integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==}
-    dev: true
-
-  /@typechain/ethers-v5@11.1.2(@ethersproject/abi@5.7.0)(@ethersproject/providers@5.7.2)(ethers@6.10.0)(typechain@8.3.2)(typescript@5.3.3):
-    resolution: {integrity: sha512-ID6pqWkao54EuUQa0P5RgjvfA3MYqxUQKpbGKERbsjBW5Ra7EIXvbMlPp2pcP5IAdUkyMCFYsP2SN5q7mPdLDQ==}
-    peerDependencies:
-      '@ethersproject/abi': ^5.0.0
-      '@ethersproject/providers': ^5.0.0
-      ethers: ^5.1.3
-      typechain: ^8.3.2
-      typescript: '>=4.3.0'
-    dependencies:
-      '@ethersproject/abi': 5.7.0
-      '@ethersproject/providers': 5.7.2
-      ethers: 6.10.0
-      lodash: 4.17.21
-      ts-essentials: 7.0.3(typescript@5.3.3)
-      typechain: 8.3.2(typescript@5.3.3)
-      typescript: 5.3.3
     dev: true
 
   /@typechain/ethers-v6@0.5.1(ethers@6.10.0)(typechain@8.3.2)(typescript@5.3.3):

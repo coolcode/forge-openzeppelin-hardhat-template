@@ -1,12 +1,14 @@
 // import fs from "fs";
-import "@nomicfoundation/hardhat-foundry";
-import "@nomicfoundation/hardhat-toolbox";
-import "@typechain/hardhat";
-import { HardhatUserConfig, task } from "hardhat/config";
+import "@nomicfoundation/hardhat-foundry"
+import "@nomicfoundation/hardhat-toolbox"
+import "@typechain/hardhat"
+import { HardhatUserConfig, task } from "hardhat/config"
 
-import example from "./tasks/example";
+import Balance from "./tasks/Balance"
 
-task("example", "Example task").setAction(example);
+task("balance", "Prints an account's balance")
+  .addParam("account", "The account's address")
+  .setAction(Balance)
 
 const config: HardhatUserConfig = {
   solidity: {
@@ -27,6 +29,6 @@ const config: HardhatUserConfig = {
     sources: "./src", // Use ./src rather than ./contracts as Hardhat expects
     cache: "./cache_hardhat", // Use a different cache for Hardhat than Foundry
   }
-};
+}
 
-export default config;
+export default config
