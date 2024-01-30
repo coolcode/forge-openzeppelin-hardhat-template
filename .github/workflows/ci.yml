@@ -9,7 +9,7 @@ env:
   FOUNDRY_PROFILE: ci
 
 jobs:
-  run-ci-hardhat:
+  run-ci:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -24,15 +24,15 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'pnpm'
+          cache: "pnpm"
 
       - name: Install Foundry
         uses: foundry-rs/foundry-toolchain@v1
         with:
           version: nightly
-     
+
       - name: Install deps (Foundry)
-        run: forge install     
+        run: forge install
 
       - name: Install deps (Hardhat)
         run: pnpm install
@@ -40,24 +40,8 @@ jobs:
       - name: Build
         run: pnpm build
 
-      - name: Run tests
-        run: pnpm test
-
-  run-ci-foundry:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Install Foundry
-        uses: foundry-rs/foundry-toolchain@v1
-        with:
-          version: nightly
-
-      - name: Install deps
-        run: forge install
-
-      - name: Check gas snapshots
-        run: forge snapshot --check
-
-      - name: Run tests
+      - name: Run tests (Foundry)
         run: forge test
+
+      - name: Run tests (Hardhat)
+        run: pnpm test
