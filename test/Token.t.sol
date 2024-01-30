@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.20;
 
-import "forge-std/Test.sol";
+import { Test } from "forge-std/Test.sol";
 
-import "src/Token.sol";
+import { Token } from "src/Token.sol";
 
 contract TokenTest is Test {
     Token t;
