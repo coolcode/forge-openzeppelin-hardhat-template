@@ -30,8 +30,11 @@ jobs:
         uses: foundry-rs/foundry-toolchain@v1
         with:
           version: nightly
-          
-      - name: Install deps
+     
+      - name: Install deps (Foundry)
+        run: forge install     
+
+      - name: Install deps (Hardhat)
         run: pnpm install
 
       - name: Build
