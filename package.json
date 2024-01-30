@@ -12,7 +12,7 @@
     "task": "hardhat balance --account 1",
     "check": "hardhat test --typecheck"
   },
-  "license": "AGPL-3.0",
+  "license": "MIT",
   "devDependencies": {
     "@nomicfoundation/hardhat-foundry": "^1.1.1",
     "@nomicfoundation/hardhat-toolbox": "^4.0.0",
